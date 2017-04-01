@@ -1,0 +1,2 @@
+module UserbHelper
+end

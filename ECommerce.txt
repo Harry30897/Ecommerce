@@ -1,0 +1,22 @@
+Models and their associations:
+
+	1. Seller => has many products
+	2. User => has many orders
+	3. Product => belongs to a seller, belongs to a category, has many product_orders (Using ProductOrder 	Model for many to many association between product and order).
+	4. Category => Has many products
+	4. Order => belongs to a user, has one payment has many product_orders (Using ProductOrder Model for many to many association between product and order).
+	5. ProductOrder => Will act as join table for Product and Order model having one extra attribute/column as quantity. Belongs to a product, belongs to an order
+	6. Payment => belongs to an order
+	I haven't added various attributes of the models. You can change name of the associations if needed. 
+
+Controllers:
+	
+	1. ProductsController (you can use the controller created by scaffold generator for this)
+	2. CartsController 
+	3. Payments COntroller
+	4. UsersController (Separate controller for user for those actions that devise doesn't manage)
+	5. GeneralController (or any other name that you would like to give)(optional)
+	Use devise gem for authentication of both Users and sellers
+
+	I have mentioned 5 controllers here so that you can place your code logically in different controllers.
+	Like adding of product to cart and storing cart in session, all these actions can be written in CartsController. Any other miscellaneous feature can be placed in GeneralController. 

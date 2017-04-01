@@ -1,0 +1,25 @@
+<%= link_to "User Sign In", new_user_session_url %>
+<%= link_to "  Seller Sign In", new_seller_session_url %><br>
+<table border=1>
+	<tr>
+		<td><h4> Categories</h4></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Electronics", url_for(controller: :general, action: :home, method: :get) %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Sports", url_for(controller: :general, action: :home, method: :get) %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Clothing", url_for(controller: :general, action: :home, method: :get) %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Toys",url_for(controller: :general, action: :home, method: :get) %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Accessories",url_for(controller: :general, action: :home, method: :get) %></td>
+	</tr>
+
+</table>
+
+

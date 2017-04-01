@@ -1,0 +1,10 @@
+<h1> Add Product</h1>
+<%= form_tag '/sell' do %>
+Title: <%= text_field_tag :title %><br>
+Category: <%= text_field_tag :category %><br>
+Description: <%= text_area_tag :description %><br>
+Price: <%= text_field_tag :price %><br>
+Colour: <%= text_field_tag :colour %><br>
+<%= submit_tag "Add Product" %>
+<% end %>
+
