@@ -19,7 +19,11 @@
 
 		 <header>
 			<%if user_signed_in?%>
-				<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+				<%= link_to "Log Out", destroy_user_session_url, method: :delete %>
+			<%end%>
+			<%if seller_signed_in?%>
+				<%= link_to "Log Out",destroy_seller_session_url, method: :delete %>
+				<%= link_to "Add Products", product_sell_product_get_url %>
 			<%end%>
 		</header>
  

@@ -1,16 +1,22 @@
 Rails.application.routes.draw do
-  get 'product/sell_product'
+  get '/product/sell_product_get' => 'product#sell_product_get'
 
-  get 'product/buy_product'
+  post '/product/sell_product' => 'product#sell_product'
 
-  get 'product/view_product'
+  post '/product/order_product' => 'product#order_product'
+
+  get  '/viewp/:id' => 'general#view_product'
+
+  get '/buyproductg' => 'product#buy_product_get'
 
   get '/' => 'general#home'
 
+  get '/general/view_category/:general' => 'general#view_category'
+
   get '/sellerb/vp' => 'sellerb#viewprofiles'
 
-  devise_for :sellers, controllers: { sessions: 'sellers/sessions' }
-  devise_for :users, controllers: { sessions: 'user/sessions' }
+  devise_for :sellers 
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,5 +1,5 @@
 class SellerbController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_seller!
 
 	def viewprofiles
 		# @email = current_user.email

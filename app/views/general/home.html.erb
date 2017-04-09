@@ -5,19 +5,19 @@
 		<td><h4> Categories</h4></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Electronics", url_for(controller: :general, action: :home, method: :get) %></td>
+		<td><%= link_to "Electronics", url_for(controller: :general, action: :view_category, method: :get,  :general => 1) %></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Sports", url_for(controller: :general, action: :home, method: :get) %></td>
+		<td><%= link_to "Sports", url_for(controller: :general, action: :view_category, method: :get,  :general => 2) %></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Clothing", url_for(controller: :general, action: :home, method: :get) %></td>
+		<td><%= link_to "Clothing", url_for(controller: :general, action: :view_category, method: :get,  :general => 3) %></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Toys",url_for(controller: :general, action: :home, method: :get) %></td>
+		<td><%= link_to "Toys",url_for(controller: :general, action: :view_category, method: :get,  :general => 4) %></td>
 	</tr>
 	<tr>
-		<td><%= link_to "Accessories",url_for(controller: :general, action: :home, method: :get) %></td>
+		<td><%= link_to "Accessories",url_for(controller: :general, action: :view_category, method: :get,  :general => 5) %></td>
 	</tr>
 
 </table>

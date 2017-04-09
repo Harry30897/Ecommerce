@@ -1,0 +1,21 @@
+<table border =1 align="center" bordercolor="darkblue">
+<tr>
+<td width="10%"><label>Title</label></td>
+<td width="10%"><label>Category</label></td>
+<td width="10%"><label>Description</label></td>
+<td width="10%"><label>Price</label></td>
+<td width="10%"><label>Color</label></td>
+<td width="10%"><label>Seller</label></td>
+</tr>
+
+<% @products.each do|product| %>
+<tr>
+<td width="5%"><a href = '/viewp/<%= product.id %>'><%= product.title %></a></td>
+<td width="5%"><%= product.category.category %></td>
+<td width="10%"><%= product.description %></td>
+<td width="5%"><%= product.price %></td>
+<td width="5%"><%= product.color %></td>
+<td width="5%"><%= product.seller.email %></td>
+<% end %>
+</tr>
+</table>

@@ -5,24 +5,23 @@ class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
 
   def after_sign_in_path_for(resource)
-  	if resource.User ?
-  		return  redirect_to 'general#home'
-  	else 
-  		return redirect_to 'sellerb#viewprofiles'
+  	if resource.class == User 
+      '/'
+    elsif resource.class == Seller
+      '/sellerb/vp'
   	end
   end
 
   def after_sign_up_path_for(resource)
-  	if resource.User ?
-  		return redirect_to 'general#home'
-  	else 
-  		return redirect_to 'sellerb#viewprofiles'
+  	if resource.class == User 
+  		'/'
+  	elsif resource.class == Seller 
+  		'/sellerb/vp'
   	end
   end
 
   def after_sign_out_path_for(resource)
-  	return redirect_to 'general#home'
-
+    '/'
   end		
 
 end

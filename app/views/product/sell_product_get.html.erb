@@ -1,10 +1,15 @@
 <h1> Add Product</h1>
-<%= form_tag '/sell' do %>
+<%= form_tag product_sell_product_url do %>
 Title: <%= text_field_tag :title %><br>
-Category: <%= text_field_tag :category %><br>
+Category: <select name="category">
+    <option value="Electronics">Electronics</option>
+    <option value="Sports">Sports</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Toys">Toys</option>
+    <option value="Accessories">Accessories</option>
+  </select><br>
 Description: <%= text_area_tag :description %><br>
 Price: <%= text_field_tag :price %><br>
-Colour: <%= text_field_tag :colour %><br>
+Color: <%= text_field_tag :color %><br>
 <%= submit_tag "Add Product" %>
 <% end %>
-

@@ -1,0 +1,13 @@
+<h1>Product Details</h1>
+<% puts  @product.id %>
+<label>Title: </label><%= @product.title %><br>
+<label>Category: </label><%= @product.category.category %><br>
+<label>Description: </label><%= @product.description %><br>
+<label>Price: </label><%= @product.price %><br>
+<label>Color: </label><%= @product.color %><br>
+<label>Seller: </label><%= @product.seller.email %><br>
+<%= form_tag url_for(controller: 'product', action:'order_product' , method: 'POST') do %>
+	<%= submit_tag "Order Product" %>
+	<%= hidden_field_tag "product_id",@product.id %>
+	<% puts @product.id.to_s + "hello" %>
+<% end %>
