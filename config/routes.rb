@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   get  '/viewp/:id' => 'general#view_product'
 
-  get '/buyproductg' => 'product#buy_product_get'
-
   get '/' => 'general#home'
 
   get '/general/view_category/:general' => 'general#view_category'

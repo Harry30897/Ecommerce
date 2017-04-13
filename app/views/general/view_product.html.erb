@@ -7,6 +7,7 @@
 <label>Color: </label><%= @product.color %><br>
 <label>Seller: </label><%= @product.seller.email %><br>
 <%= form_tag url_for(controller: 'product', action:'order_product' , method: 'POST') do %>
+    Quantity: <%= text_field_tag :quantity %><br>
 	<%= submit_tag "Order Product" %>
 	<%= hidden_field_tag "product_id",@product.id %>
 	<% puts @product.id.to_s + "hello" %>

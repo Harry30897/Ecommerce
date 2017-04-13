@@ -14,16 +14,13 @@ class ProductController < ApplicationController
 
 	def order_product 
 		product_id = params[:product_id].to_i
-		user_id = current_user.id
-		# byebug
-		# puts product_id
-		# puts user_id 
-		order = Order.create(product_id: product_id, user_id: user_id)
-		if order
-			return redirect_to '/buyproductg'
+		quantity = params[:quantity]
+		order = current_user.orders.create(product_id: product_id)
+		product_order = order.product_orders.create(product_id: product_id, quantity: quantity)
+		if order && product_order
+			return redirect_to '/'
 		else
 			return redirect_to :back
 		end	
 	end
-
 end
