@@ -1,4 +1,5 @@
 class GeneralController < ApplicationController
+	# autocomplete :products, :title
 
 	def view_category
 		category_id = params[:general]

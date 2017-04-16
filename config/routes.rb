@@ -13,8 +13,11 @@ Rails.application.routes.draw do
 
   get '/sellerb/vp' => 'sellerb#viewprofiles'
 
-  devise_for :sellers 
-  devise_for :users
+  get '/autocomplete_products_title' => 'application#autocomplete_products_title'
+
+
+  devise_for :sellers, controllers: {sessions: "seller/sessions", registrations: "seller/registrations"}
+  devise_for :users, controllers: {sessions: "user/sessions", registrations: "user/registrations"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
